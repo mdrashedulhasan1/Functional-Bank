@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .balance-container{
+            margin: 0 auto;
+            width: 75%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 20px;
+        }
+        .box{
+            background-color: blueviolet;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .control-panal{
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 75%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        .box-control{
+            background-color: cornflowerblue;
+            border-radius: 10px;
+            padding: 10px 20px;
+        }
+        button{
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: cadetblue;
+            border: 0;
+            border: 2px solid red;
+            border-radius: 10px;
+            color: white;
+            font-weight: 700;
+        }
+        input{
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">This is My Bank</h1>
+    <section class="balance-container">
+        <div style="background-color: blue;" class="box">
+            <h2>Deposit</h2>
+            <h1>$<span id="deposit-text">00</span></h1>
+        </div>
+        <div style="background-color: #9715e3;" class="box">
+            <h2>Withdraw</h2>
+            <h1>$<span id="withdraw-text">00</span></h1>
+        </div>
+        <div style="background-color: rgb(237, 31, 155);" class="box">
+            <h2>Balance</h2>
+            <h1>$<span id="balance-text">500</span></h1>
+        </div>
+    </section>
+    <section class="control-panal">
+        <div class="box-control">
+            <h3>Please Deposit</h3>
+            <input type="text" name="" id="deposit-input" placeholder="please deposit here"><br>
+            <button id="deposit-btn">Deposit</button>
+        </div>
+        <div class="box-control">
+            <h3>Please Withdraw</h3>
+            <input type="text" name="" id="withdraw-input" placeholder="please withdraw here"><br>
+            <button id="withdraw-btn">Withdraw</button>
+        </div>
+    </section>
+    <script src="myBank.js"></script>
+</body>
+</html>
